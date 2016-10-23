@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Keybase.io Card</title>
+		<!-- Required meta tags always come first -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Custom Style -->
+		<link rel="stylesheet" type="text/css" href="https://keybase.onlineth.com/assets/css/style.css">
+	</head>
+	<body>
+		<div class="vertical-center">
+			<div class="container container-fluid text-center">
+				<h2>Keybase Card</h2>
+				<em>A way to share your keybase profile online easily through an image</em>
+				<br>
+				<br>
+				<div id='Input' class="input-group">
+					<input type="text" class="form-control" id="maininput" placeholder="username">
+					<span class="input-group-btn">
+						<button class="btn btn-primary has-spinner" type="button" id="GO">
+						<span class="spinner"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span></span>
+						Go!
+						</button>
+					</span>
+				</div>
+				<div id="alertBox" style="display:none;">
+					<br><br>
+					<div class="alert alert-dismissible alert-danger">
+						<button type="button" class="close" onclick="$('#alertBox').hide()">×</button>
+						<strong>Oh snap!</strong><br>
+						<div id="alertMessage">
+						</div>
+					</div>
+				</div>
+				<div id="cards" style="display:none;">
+					<div class="row">
+						<div class="col-sm-6">
+							<h3 class="theme-header">Default Theme</h3>
+							<a target="_blank" href="#" id="default-theme-card-a"><img width="210" height="58" onload="checkImageLoad();" id="default-theme-card" onerror="imgError();"/></a>
+						</div>
+						<div class="col-sm-6">
+							<br>
+							<textarea id="default-theme-code" class="form-control" rows="5" style="font-size: 9pt;"></textarea>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-6">
+							<h3 class="theme-header">Clean Theme</h3>
+							<a target="_blank" href="#" id="clean-theme-card-a"><img width="210" height="58" id="clean-theme-card"/></a>
+						</div>
+						<div class="col-sm-6">
+							<br>
+							<textarea id="clean-theme-code" class="form-control" rows="5" style="font-size: 9pt;"></textarea>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-6">
+							<h3 class="theme-header">Dark Theme</h3>
+							<a target="_blank" href="#" id="dark-theme-card-a"><img width="210" height="58" id="dark-theme-card"/></a>
+						</div>
+						<div class="col-sm-6">
+							<br>
+							<textarea id="dark-theme-code" class="form-control" rows="5" style="font-size: 9pt;"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer style="text-align: center; background-color: white;" class="navbar navbar-fixed-bottom">
+				<br>
+				<p>Hosted by <a href="https://www.openshift.com/">OpenShift</a> | Secured by <a href="https://cloudflare.com">CloudFlare</a> | Made by <a href="https://keybase.io/online">Tom</a></p>
+			</footer>
+			<br>
+		</div>
+		
+		<!-- jQuery first, then Bootstrap JS. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Clipboard JS -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+		<!-- Script -->
+		<script type="text/javascript" src="https://keybase.onlineth.com/assets/js/script.js"></script>
+		<img src="https://stats.onlineth.com/js/?idsite=3&rec=1" style="border:0" alt="" />
+	</body>
+</html>
