@@ -54,6 +54,7 @@ $website_proof = property_exists($processed->them[0]->proofs_summary->by_proof_t
 $coinbase_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "coinbase");
 $hackernews_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "hackernews");
 $bitcoin_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "bitcoin");
+$zcash_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "zcash");
 
 ///////////////////////////////////////////////////////////////////
 
@@ -213,6 +214,17 @@ if($website_proof) {
 if($bitcoin_aviable) {
 	$bitcoin_icon = imagecreatefrompng('assets/icons/default/bitcoin.png');
 	imagecopyresampled($canvas, $bitcoin_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
+	$proof_x_position = $proof_x_position + 30;
+}
+
+//add zcash
+if ($zcash_aviable) {
+	if ($theme == 'dark') {
+		$zcash_icon = imagecreatefrompng('assets/icons/dark/zcash-icon.png');
+	} else {
+		$zcash_icon = imagecreatefrompng('assets/icons/default/zcash-icon.png');
+	}
+	imagecopyresampled($canvas, $zcash_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
 	$proof_x_position = $proof_x_position + 30;
 }
 
