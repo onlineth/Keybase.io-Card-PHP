@@ -47,6 +47,7 @@ $reddit_proof = property_exists($processed->them[0]->proofs_summary->by_proof_ty
 $website_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "dns");
 $coinbase_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "coinbase");
 $hackernews_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "hackernews");
+$facebook_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "facebook");
 $bitcoin_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "bitcoin");
 $zcash_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "zcash");
 
@@ -194,6 +195,13 @@ if($coinbase_proof){
 if($hackernews_proof) {
 	$hacker_news_icon = imagecreatefrompng('assets/icons/default/hacker-news.png');
 	imagecopyresampled($canvas, $hacker_news_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
+	$proof_x_position = $proof_x_position + 25;
+}
+
+//add facebook
+if($facebook_proof) {
+	$facebook_icon = imagecreatefrompng('assets/icons/default/facebook.png');
+	imagecopyresampled($canvas, $facebook_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
 	$proof_x_position = $proof_x_position + 25;
 }
 
