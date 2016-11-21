@@ -150,10 +150,10 @@ if($number_devices) {
 	}
 	if ($number_devices <= 9) {
 		imagecopyresampled($canvas, $device_icon, 130, 80, 0, 0, 20, 20, 50, 50);
-		$proof_x_position = 160;
+		$proof_x_position = 150;
 	} else {
 		imagecopyresampled($canvas, $device_icon, 150, 80, 0, 0, 20, 20, 50, 50);
-		$proof_x_position = 175;
+		$proof_x_position = 165;
 	}
 
 }
@@ -162,7 +162,7 @@ if($number_devices) {
 if ($twitter_proof) {
 	$twitter_icon = imagecreatefrompng('assets/icons/default/rsz_twitter-black-shape.png');
 	imagecopyresampled($canvas, $twitter_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add github
@@ -173,42 +173,42 @@ if ($github_proof) {
 		$github_icon = imagecreatefrompng('assets/icons/default/github-logo.png');
 	}
 	imagecopyresampled($canvas, $github_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add reddit
 if($reddit_proof) {
 	$reddit_icon = imagecreatefrompng('assets/icons/default/reddit-big-logo.png');
 	imagecopyresampled($canvas, $reddit_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add coinbase
 if($coinbase_proof){
 	$coinbase_icon = imagecreatefrompng('assets/icons/default/coinbase.png');
 	imagecopyresampled($canvas, $coinbase_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add hacker news
 if($hackernews_proof) {
 	$hacker_news_icon = imagecreatefrompng('assets/icons/default/hacker-news.png');
 	imagecopyresampled($canvas, $hacker_news_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add globe (websites)
 if($website_proof) {
 	$globe_icon = imagecreatefrompng('assets/icons/default/globe.png');
 	imagecopyresampled($canvas, $globe_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add bitcoin
 if($bitcoin_aviable) {
 	$bitcoin_icon = imagecreatefrompng('assets/icons/default/bitcoin.png');
 	imagecopyresampled($canvas, $bitcoin_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 //add zcash
@@ -219,7 +219,7 @@ if ($zcash_aviable) {
 		$zcash_icon = imagecreatefrompng('assets/icons/default/zcash-icon.png');
 	}
 	imagecopyresampled($canvas, $zcash_icon, $proof_x_position, 80, 0, 0, 20, 20, 50, 50);
-	$proof_x_position = $proof_x_position + 30;
+	$proof_x_position = $proof_x_position + 25;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
