@@ -153,7 +153,7 @@ if($number_devices) {
 		$proof_x_position = 150;
 	} else {
 		imagecopyresampled($canvas, $device_icon, 150, 80, 0, 0, 20, 20, 50, 50);
-		$proof_x_position = 165;
+		$proof_x_position = 170;
 	}
 
 }
