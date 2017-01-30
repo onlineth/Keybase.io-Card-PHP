@@ -1,11 +1,5 @@
 <?php
 
-
-/*
-ob_start();
-header("Connection: close\r\n"); 
-header('Content-Encoding: none\r\n');*/
-
 require('assets/php/functions.php');
 
 if(isset($_GET['theme'])) {
@@ -241,12 +235,3 @@ imagepng($canvas);
 
 //frees any memory associated with the image 
 imagedestroy($canvas);
-
-
-/*
-$size = ob_get_length();
-header("Content-Length: ". $size . "\r\n"); 
-// send info immediately and close connection
-ob_end_flush();
-flush();*/
-
