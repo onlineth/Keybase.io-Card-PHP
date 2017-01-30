@@ -8,17 +8,17 @@ Simply clone this repository on an Apache-based web server with PHP support and 
 
 ###Default Theme:
 
-![Default Theme Card](https://i.imgur.com/mt4Ya4s.png)
+![Default Theme Card](https://keybase.onlineth.com/online.png?theme=default)
 
 ###Clean Theme:
 
-![Clean Theme Card](https://i.imgur.com/ZVJEESB.png)
+![Clean Theme Card](https://keybase.onlineth.com/online.png?theme=clean)
 
 *This one's transparent*
 
 ###Dark Theme:
 
-![Dark Theme Card](https://i.imgur.com/7wWJ6Yb.png)
+![Dark Theme Card](https://keybase.onlineth.com/online.png?theme=dark)
 
 # License
 
