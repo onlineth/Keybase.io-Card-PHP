@@ -20,6 +20,12 @@ Simply clone this repository on an Apache-based web server with PHP support and 
 
 ![Dark Theme Card](https://keybase.onlineth.com/online.png?theme=dark)
 
+## 128 Fingerprint Length
+
+These are also available
+
+![Default Theme Card 128 BIT](https://keybase.onlineth.com/online.png?theme=default&bit=128)
+
 # License
 
 This project is licensed under the [MIT License](https://github.com/onlineth/Keybase.io-Card-Node.js/blob/master/LICENSE)
