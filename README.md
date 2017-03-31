@@ -6,17 +6,17 @@ Simply clone this repository on an Apache-based web server with PHP support and 
 
 # Keybase.io Card Examples
 
-###Default Theme:
+### Default Theme:
 
 ![Default Theme Card](https://keybase.onlineth.com/online.png?theme=default)
 
-###Clean Theme:
+### Clean Theme:
 
 ![Clean Theme Card](https://keybase.onlineth.com/online.png?theme=clean)
 
 *This one's transparent*
 
-###Dark Theme:
+### Dark Theme:
 
 ![Dark Theme Card](https://keybase.onlineth.com/online.png?theme=dark)
 
