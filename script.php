@@ -1,7 +1,5 @@
 <?php
 
-require('assets/php/functions.php');
-
 if(isset($_GET['theme'])) {
 	$theme = $_GET['theme'];
 } else {
@@ -14,6 +12,21 @@ if($username == '') {
 }
 
 /////////////////////////////////////////////////////////////////
+// Functions
+
+// Draws a border
+function drawBorder(&$img, &$color, $thickness = 1) 
+{
+    $x1 = 0; 
+    $y1 = 0; 
+    $x2 = ImageSX($img) - 1; 
+    $y2 = ImageSY($img) - 1; 
+
+    for($i = 0; $i < $thickness; $i++) 
+    { 
+        ImageRectangle($img, $x1++, $y1++, $x2--, $y2--, $color); 
+    } 
+}
 
 // Needed for alternative file_get_contents
 function url_get_contents ($Url) {
