@@ -41,16 +41,38 @@ window.onpopstate = function (event) {
   }
 }
 
+//Bind Fingerprint Bit Pills
+$('#bit64').click(function() {
+    $('#bit64').addClass('active');
+    $('#bit128').removeClass('active');
+    start();
+})
+$('#bit128').click(function() {
+    $('#bit128').addClass('active');
+    $('#bit64').removeClass('active');
+    start();
+})
+
 //Start (close alert box, update image urls, add code, link images, and update url)
 function start(){
     $('#alertBox').hide();
     $('#GO').addClass('active');
-    document.getElementById('default-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=default';
-    document.getElementById('clean-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=clean';
-    document.getElementById('dark-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=dark';
-    $('#default-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png" width="210" height="58" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
-    $('#clean-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=clean" width="210" height="58" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
-    $('#dark-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=dark" width="210" height="58" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
+    if ($('#bit128').hasClass('active')) {
+        var bit = "&bit=128";
+        var width = 210;
+        var height = 58;
+    } else {
+        var bit = "";
+        var width = 255;
+        var height = 68;
+    }
+    document.getElementById('default-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=default'+bit;
+    document.getElementById('clean-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=clean'+bit;
+    document.getElementById('dark-theme-card').src='https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=dark'+bit;
+
+    $('#default-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=default'+bit+'" width="'+width+'" height="'+height+'" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
+    $('#clean-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=clean'+bit+'" width="'+width+'" height="'+height+'" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
+    $('#dark-theme-code').val('<a href="https://keybase.io/'+$("#maininput").val()+'"><img src="https://keybase.onlineth.com/'+$("#maininput").val()+'.png?theme=dark'+bit+'" width="'+width+'" height="'+height+'" alt="keybase.io profile for '+$("#maininput").val()+'"></a>');
     $('#default-theme-card-a').attr("href", 'https://keybase.io/'+$("#maininput").val());
     $('#clean-theme-card-a').attr("href", 'https://keybase.io/'+$("#maininput").val());
     $('#dark-theme-card-a').attr("href", 'https://keybase.io/'+$("#maininput").val());
