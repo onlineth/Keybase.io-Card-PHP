@@ -71,13 +71,14 @@ $fingerprint_128bit = chunk_split($fingerprint_128bit, 4, ' ');
 
 
 $number_devices = count(get_object_vars($processed->them[0]->devices));
-$twitter_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "twitter");
-$github_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "github");
-$reddit_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "reddit");
-$website_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "dns");
-$coinbase_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "coinbase");
-$hackernews_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "hackernews");
-$facebook_proof = property_exists($processed->them[0]->proofs_summary->by_proof_type, "facebook");
+$proofs = $processed->them[0]->proofs_summary->by_presentation_group;
+$twitter_proof = property_exists($proofs, "twitter");
+$github_proof = property_exists($proofs, "github");
+$reddit_proof = property_exists($proofs, "reddit");
+$website_proof = property_exists($proofs, "dns");
+$coinbase_proof = property_exists($proofs, "coinbase");
+$hackernews_proof = property_exists($proofs, "hackernews");
+$facebook_proof = property_exists($proofs, "facebook");
 $bitcoin_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "bitcoin");
 $zcash_aviable = property_exists($processed->them[0]->cryptocurrency_addresses, "zcash");
 
