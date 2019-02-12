@@ -1,4 +1,3 @@
-AddType application/x-httpd-php70 .php
 RewriteEngine on
 RewriteRule ^(.*)\.png script.php
 
